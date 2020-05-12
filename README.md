@@ -1,2 +1,2 @@
-# springcloudStudy
-springcloud学习
+# springcloud学习
+* 创建简单服务提供者payment及服务消费者order，抽取公共实体到commons模块，完成order到payment的服务调用，实现Rest微服务构建；
