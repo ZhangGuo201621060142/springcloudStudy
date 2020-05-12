@@ -20,6 +20,7 @@
         <module>cloud-consumer-order</module>
         <module>code-generator</module>
         <module>cloud-api-commons</module>
+        <module>cloud-eureka-server</module>
     </modules>
 
     <properties>

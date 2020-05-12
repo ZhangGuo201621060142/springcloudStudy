@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: cloud-payment-service
+    name: cloud-order-service
   datasource:
     # 当前数据源操作类型
     type: com.alibaba.druid.pool.DruidDataSource
@@ -16,3 +16,8 @@ spring:
     restart:
       additional-paths: src/main/java
       enabled: true
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka
