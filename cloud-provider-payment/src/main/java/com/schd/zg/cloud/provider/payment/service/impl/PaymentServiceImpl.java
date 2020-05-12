@@ -1,6 +1,6 @@
 package com.schd.zg.cloud.provider.payment.service.impl;
 
-import com.schd.zg.cloud.provider.payment.entity.Payment;
+import com.schd.zg.cloud.api.commons.entities.Payment;
 import com.schd.zg.cloud.provider.payment.mapper.PaymentMapper;
 import com.schd.zg.cloud.provider.payment.service.IPaymentService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;

@@ -1,7 +1,7 @@
 package com.schd.zg.cloud.provider.payment.mapper;
 
-import com.schd.zg.cloud.provider.payment.entity.Payment;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.schd.zg.cloud.api.commons.entities.Payment;
 
 /**
  * <p>

@@ -1,4 +1,4 @@
-package com.schd.zg.cloud.provider.payment.entity;
+package com.schd.zg.cloud.api.commons.response;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

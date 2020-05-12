@@ -1,7 +1,7 @@
 package com.schd.zg.cloud.provider.payment.service;
 
-import com.schd.zg.cloud.provider.payment.entity.Payment;
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.schd.zg.cloud.api.commons.entities.Payment;
 
 /**
  * <p>

@@ -19,6 +19,7 @@
         <module>cloud-provider-payment</module>
         <module>cloud-consumer-order</module>
         <module>code-generator</module>
+        <module>cloud-api-commons</module>
     </modules>
 
     <properties>
