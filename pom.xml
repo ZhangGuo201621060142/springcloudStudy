@@ -21,6 +21,7 @@
         <module>code-generator</module>
         <module>cloud-api-commons</module>
         <module>cloud-eureka-server</module>
+        <module>cloud-eureka-server7002</module>
     </modules>
 
     <properties>
