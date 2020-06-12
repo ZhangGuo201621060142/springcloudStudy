@@ -35,7 +35,7 @@ public class PaymentController {
         boolean flag = paymentService.saveOrUpdate(payment);
         if (flag) {
             commonResult.setCode(200);
-            commonResult.setMessage("插入成功！port：" + port);
+            commonResult.setMessage("插入成功！port: " + port);
             commonResult.setData(payment);
         } else {
             commonResult.setCode(500);
