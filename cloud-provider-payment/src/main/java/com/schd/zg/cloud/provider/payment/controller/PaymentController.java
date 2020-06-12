@@ -1,15 +1,16 @@
 package com.schd.zg.cloud.provider.payment.controller;
 
 
-import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.schd.zg.cloud.api.commons.entities.Payment;
 import com.schd.zg.cloud.api.commons.response.CommonResult;
 import com.schd.zg.cloud.provider.payment.service.IPaymentService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.client.ServiceInstance;
+import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
-import java.sql.Wrapper;
 
 /**
  * <p>
@@ -21,6 +22,7 @@ import java.sql.Wrapper;
  */
 @RestController
 @RequestMapping("/payment")
+@Slf4j
 public class PaymentController {
 
     @Value("${server.port}")
@@ -28,6 +30,9 @@ public class PaymentController {
 
     @Resource
     private IPaymentService paymentService;
+
+    @Resource
+    private DiscoveryClient discoveryClient;
 
     @PostMapping("/add")
     public CommonResult<Payment> add(@RequestBody Payment payment) {
@@ -58,6 +63,17 @@ public class PaymentController {
             commonResult.setData(payment);
         }
         return commonResult;
+    }
+
+    @GetMapping("/discovery")
+    public CommonResult discovery() {
+        for (String service : discoveryClient.getServices()) {
+            log.info(service);
+            for (ServiceInstance instance : discoveryClient.getInstances(service)) {
+                log.info(instance.getServiceId() + " " + instance.getHost() + " " + instance.getUri());
+            }
+        }
+        return new CommonResult();
     }
 
 }
