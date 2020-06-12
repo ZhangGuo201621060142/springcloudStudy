@@ -10,4 +10,10 @@ eureka:
     #这里就是注册中心，不需要检索我这个服务
     fetch-registry: false
     service-url:
-      defaultZone: http://eureka7002:7002/eureka/
+      defaultZone: http://eureka7001:7001/eureka/
+#      defaultZone: http://eureka7002:7002/eureka/
+  server:
+#    是否开启自我保护机制（默认开启，则在规定时间内没有收到服务的心跳时，暂时不清理这个服务，关闭则清理）
+    enable-self-preservation: false
+#    清理无效节点的时间间隔
+    eviction-interval-timer-in-ms: 2000

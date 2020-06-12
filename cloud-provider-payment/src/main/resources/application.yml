@@ -23,7 +23,12 @@ mybatis:
 eureka:
   client:
     service-url:
-      defaultZone: http://eureka7001:7001/eureka, http://eureka7002:7002/eureka
+      defaultZone: http://eureka7001:7001/eureka
+#      defaultZone: http://eureka7001:7001/eureka, http://eureka7002:7002/eureka
   instance:
     instance-id: payment8001
     prefer-ip-address: true
+#   发送给eureka server的心跳频率
+    lease-renewal-interval-in-seconds: 1
+#    上一次收到心跳后等待心跳的时间，超过则清理这个服务
+    lease-expiration-duration-in-seconds: 2
